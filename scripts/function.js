@@ -1,0 +1,41 @@
+$(document).ready(function(){
+	$("#bd").hover(function(){
+		$("#bd-content").show();
+		
+	},function(){
+		$("#bd-content").hover(function(){
+		$(this).show();																	
+	});
+	});
+	$("#bd").mouseout(function(){
+	$("#bd-content").hide();
+	});
+	$("#jp").hover(function(){
+	$("#jp-content").show();
+		
+	},function(){
+		$("#jp-content").hover(function(){
+		$(this).show();																	
+	});
+	});
+	$("#jp").mouseout(function(){
+	$("#jp-content").hide();
+	});
+	$("#world-map").hover(function(){
+	$("#jp-content").hide();	
+	$("#bd-content").hide();
+	});
+	$("#jp-s").click(function(){
+	$("#world-map").css({'background':'url(./Images/jp.jpg)'});
+	$("#jp-content").hide();	
+	$("#bd-content").hide();
+	$("#bd,#jp").hide();
+	});
+	$("#bd-s").click(function(){
+	$("#world-map").css({'background':'url(./Images/bd.jpg)'});
+	$("#jp-content").hide();	
+	$("#bd-content").hide();
+	$("#bd,#jp").hide();
+	});
+
+});
